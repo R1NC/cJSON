@@ -275,5 +275,7 @@ if(ENABLE_LOCALES)
 	add_definitions(-DENABLE_LOCALES)
 endif()
 
-add_subdirectory(tests)
+if(ENABLE_CJSON_TEST)
+    add_subdirectory(tests)
+endif()
 add_subdirectory(fuzzing)
